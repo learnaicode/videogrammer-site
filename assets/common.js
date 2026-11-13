@@ -1,6 +1,6 @@
 (function(){
 const here=(document.body.dataset.page||'home');
-const NAV=[['films','Films','films.html'],['studio','Studios','studio.html'],['school','School','school.html'],['vai','V AI','vai.html'],['lab','Lab','lab.html']];
+const NAV=[['films','Films','films.html'],['studio','Studios','studio.html'],['process','Process','process.html'],['school','School','school.html'],['vai','V AI','vai.html'],['research','Research','research.html']];
 const head=document.createElement('header');head.className='top';
 head.innerHTML=`<div class="wrap"><a class="brand logo" href="index.html" aria-label="Videogrammer home"><img src="assets/logo/mark.png" alt="" class="lm"><span class="lt">Videogrammer</span></a>
 <button id="burger" aria-expanded="false" aria-controls="mainnav">Menu</button>
@@ -9,19 +9,21 @@ document.body.prepend(head);
 const foot=document.createElement('footer');foot.className='foot';
 foot.innerHTML=`<div class="wrap">
 <div><a class="brand logo" href="index.html" aria-label="Videogrammer home"><img src="assets/logo/mark.png" alt="" class="lm"><span class="lt">Videogrammer</span></a><p style="margin-top:12px;max-width:380px;font-size:14px">A film school, a film studio, and V AI: the guide that holds what your film has established. London · Dubai · India.</p></div>
-<div><h5>Make</h5><a href="studio.html">Videogrammer Studios</a><a href="studio.html#commission">Commission a film</a><a href="films.html">Films</a></div>
+<div><h5>Videogrammer Studios</h5><a href="studio.html#commission">Commission a film</a><a href="process.html">Process</a><a href="films.html">Films</a><a href="mailto:guru@videogrammer.com">guru@videogrammer.com</a></div>
 <div><h5>Learn</h5><a href="school.html">AI Film School</a><a href="school.html#programme">The 48-week programme</a><a href="https://www.skool.com/videogrammer-8702/classroom">Classroom</a></div>
-<div><h5>Build</h5><a href="vai.html">V AI</a><a href="vai.html#steps">The 25 steps</a><a href="lab.html">Lab</a><a href="mailto:guru@videogrammer.com">guru@videogrammer.com</a></div>
-<div class="fine">Every status on this site is stated as it is today. Prototype means it runs in our prototype, not that it is a finished product. © Videogrammer Studios 2026.</div></div>`;
+<div><h5>Build</h5><a href="vai.html">V AI</a><a href="vai.html#steps">The 25 steps</a><a href="research.html">Research</a><a href="mailto:guru@videogrammer.com">guru@videogrammer.com</a></div>
+<div class="fine">© 2026 Videogrammer. All rights reserved.</div></div>`;
 document.body.append(foot);
 const wa=document.createElement('a');wa.className='wa';wa.href='https://wa.me/16504437662';wa.textContent='WhatsApp';wa.rel='noopener';document.body.append(wa);
 if(!document.getElementById('hud')){const h=document.createElement('div');h.id='hud';h.innerHTML='<div class="a">ENTERING</div><div class="b">Your film</div>';document.body.append(h);}
-addEventListener('scroll',()=>head.classList.toggle('solid',scrollY>40),{passive:true});
+const wc=document.getElementById('world'),vl=document.querySelector('.veil');
+const dim=()=>{head.classList.toggle('solid',scrollY>40);const k=Math.min(1,scrollY/(innerHeight*0.7));if(wc)wc.style.opacity=String(1-k*0.62);if(vl)vl.style.opacity=String(0.6+k*0.4);};
+addEventListener('scroll',dim,{passive:true});dim();
 document.getElementById('burger').onclick=e=>{const n=document.getElementById('mainnav');n.classList.toggle('open');e.target.setAttribute('aria-expanded',n.classList.contains('open'));};
 const mt=document.getElementById('motionTog');const setT=()=>{const on=!document.body.classList.contains('calm');mt.textContent=on?'Motion on':'Motion off';mt.setAttribute('aria-pressed',on);};
 mt.onclick=()=>{const on=document.body.classList.contains('calm');window.setMotion&&window.setMotion(on);document.body.classList.toggle('calm',!on);setT();};setTimeout(setT,50);
 /* jump between worlds */
-const NAMES={'index.html':'The map','studio.html':'The studio','school.html':'The school','vai.html':'V AI','films.html':'The films','lab.html':'The lab'};
+const NAMES={'index.html':'The map','studio.html':'The studio','school.html':'The school','vai.html':'V AI','films.html':'The films','research.html':'Research','process.html':'Process'};
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a||a.target==='_blank'||e.metaKey||e.ctrlKey)return;const href=a.getAttribute('href');const file=href.split('#')[0];
   if(!NAMES[file]||file===(location.pathname.split('/').pop()||'index.html'))return;if(document.body.classList.contains('calm'))return;
   e.preventDefault();const h=document.getElementById('hud');if(h){h.querySelector('.a').textContent='TRAVELLING TO';h.querySelector('.b').textContent=NAMES[file];h.classList.add('on');}
