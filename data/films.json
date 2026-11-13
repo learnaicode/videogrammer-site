@@ -1,0 +1,235 @@
+{
+ "_readme": "Add a new film by copying one block and putting it at the TOP of the films array. Then run: python3 build.py. Fields marked DRAFT need Gurudath's confirmation before the site goes live.",
+ "studio": {
+  "name": "Videogrammer",
+  "legal": "Videogrammer Studios",
+  "founder": "Gurudath Sadanandan",
+  "founded": "2026",
+  "email": "hello@videogrammer.com",
+  "youtube": "https://www.youtube.com/@videogrammer",
+  "markets": [
+   "London",
+   "Dubai",
+   "India"
+  ],
+  "line": "We write the song. Then we make the film."
+ },
+ "films": [
+  {
+   "slug": "go-go-little-one",
+   "no": "06",
+   "title": "Go Go Little One",
+   "title_alt": "",
+   "translation": "A Mother's Love, A Child's Wings",
+   "yt": "hcD6IDmASCE",
+   "type": "Music Video",
+   "artist": "NAMA",
+   "language": "English",
+   "released": "2026-10-27",
+   "released_display": "October 2026",
+   "logline": "A mother eagle watches her young one learn to fly, and loves it enough to let it go. A song for every parent whose home has grown quieter.",
+   "note": "",
+   "credits": [
+    [
+     "Song",
+     "NAMA"
+    ],
+    [
+     "Published by",
+     "NAMA on YouTube"
+    ]
+   ],
+   "provenance": "",
+   "tools": "",
+   "duration": 279
+  },
+  {
+   "slug": "prometheus",
+   "no": "05",
+   "title": "Prometheus",
+   "title_alt": "",
+   "translation": "Too Holy Too Bad",
+   "yt": "6a6UXev89gw",
+   "type": "Music Video",
+   "artist": "NAMA",
+   "language": "English",
+   "released": "2026-09-08",
+   "released_display": "September 2026",
+   "logline": "The myth of Prometheus, who stole fire from the gods and gave it to humanity, retold as a cinematic music video: the punishment returns every day, but the fire survives.",
+   "note": "Prometheus is the studio's most ambitious film to date: a mythological music film built around celestial environments, ancient Greek visual language and photorealistic character work. The song came first, and the film was designed backwards from it. DRAFT — Gurudath to confirm and expand.",
+   "credits": [
+    [
+     "Written & Directed",
+     "Gurudath Sadanandan"
+    ],
+    [
+     "Song",
+     "NAMA"
+    ],
+    [
+     "Vocal",
+     "Adwaith M S"
+    ],
+    [
+     "Production",
+     "Videogrammer Studios"
+    ],
+    [
+     "Edit & Grade",
+     "Gurudath Sadanandan"
+    ]
+   ],
+   "provenance": "Hybrid. Generated and composited imagery, original song, in-house edit and grade.",
+   "tools": "Seedance 2.5 (image & motion) · Suno (music production)",
+   "duration": 174
+  },
+  {
+   "slug": "the-duel",
+   "no": "04",
+   "title": "The Duel of Musashi & Kojiro",
+   "title_alt": "",
+   "translation": "",
+   "yt": "4yj399mjGVA",
+   "type": "Cinematic Short",
+   "artist": "NAMA",
+   "language": "Instrumental",
+   "released": "2026-09-04",
+   "released_display": "September 2026",
+   "logline": "Two swordsmen. One shore. No dialogue. The most famous duel in Japanese history, told in three minutes and a score written for it.",
+   "note": "The Duel is the film that proved the studio could carry a narrative, not just a mood. There is no dialogue and no lyric — the score does the storytelling, which meant the music had to be written to a shot list rather than the other way round. It remains the clearest statement of what Videogrammer is for. DRAFT — Gurudath to confirm and expand.",
+   "credits": [
+    [
+     "Written & Directed",
+     "Gurudath Sadanandan"
+    ],
+    [
+     "Original Score",
+     "NAMA"
+    ],
+    [
+     "Production",
+     "Videogrammer Studios"
+    ],
+    [
+     "Edit & Grade",
+     "Gurudath Sadanandan"
+    ]
+   ],
+   "provenance": "Hybrid. Generated and composited imagery, original score, in-house edit and grade.",
+   "tools": "Seedance 2.5 (image & motion) · Suno (music production)",
+   "duration": 175
+  },
+  {
+   "slug": "long-road",
+   "no": "03",
+   "title": "Long Road",
+   "title_alt": "",
+   "translation": "",
+   "yt": "de23Mbjfbwo",
+   "type": "Music Video · Arabic-inspired hip-hop",
+   "artist": "NAMA",
+   "language": "English",
+   "released": "2026-09-02",
+   "released_display": "September 2026",
+   "logline": "A road picture in three minutes. Two men, two cars, and the distance neither of them will admit to.",
+   "note": "Long Road was an exercise in motion — the first Videogrammer film where the camera never settles. Every cut lands on a beat, which is only possible when the person cutting the film is the person who wrote the track. DRAFT — Gurudath to confirm and expand.",
+   "credits": [
+    [
+     "Written & Directed",
+     "Gurudath Sadanandan"
+    ],
+    [
+     "Song",
+     "NAMA"
+    ],
+    [
+     "Production",
+     "Videogrammer Studios"
+    ],
+    [
+     "Edit & Grade",
+     "Gurudath Sadanandan"
+    ]
+   ],
+   "provenance": "Hybrid. Generated and composited imagery, original song, in-house edit and grade.",
+   "tools": "Seedance 2.5 (image & motion) · Suno (music production)",
+   "duration": 153
+  },
+  {
+   "slug": "mughamara",
+   "no": "02",
+   "title": "Mughamara",
+   "title_alt": "الحياة مغامرة",
+   "translation": "Life Is an Adventure",
+   "yt": "3tKYqFxFamY",
+   "type": "Music Video · Arabic cinematic EDM",
+   "artist": "NAMA",
+   "language": "Arabic",
+   "released": "2026-08-30",
+   "released_display": "August 2026",
+   "logline": "An Arabic-language release built around a single idea: that a life spent avoiding risk is the only one truly wasted.",
+   "note": "Mughamara was the first Videogrammer release written in a language other than English, and it changed how the studio works. The song came first — melody, then lyric, then arrangement — and the film was designed backwards from the chorus. The gold in the frame is not a grade applied at the end; it was specified at the boards stage and every shot was built to sit inside it. DRAFT — Gurudath to confirm and expand.",
+   "credits": [
+    [
+     "Written & Directed",
+     "Gurudath Sadanandan"
+    ],
+    [
+     "Song",
+     "NAMA"
+    ],
+    [
+     "Vocal",
+     "Adwaith M S"
+    ],
+    [
+     "Production",
+     "Videogrammer Studios"
+    ],
+    [
+     "Edit & Grade",
+     "Gurudath Sadanandan"
+    ]
+   ],
+   "provenance": "Hybrid. Generated and composited imagery, original song, in-house edit and grade.",
+   "tools": "Seedance 2.5 (image & motion) · Suno (music production)",
+   "duration": 185
+  },
+  {
+   "slug": "stay-standing",
+   "no": "01",
+   "title": "Stay Standing",
+   "title_alt": "",
+   "translation": "",
+   "yt": "BpCCHqhkBSA",
+   "type": "Music Video",
+   "artist": "NAMA",
+   "language": "English",
+   "released": "2026-08-28",
+   "released_display": "August 2026",
+   "logline": "The first release. A song about staying upright when the reasons to have run out.",
+   "note": "Stay Standing is where the studio began — the first time the song and the film were made by the same hand, in the same week, with nobody's permission. Everything Videogrammer does now started here. DRAFT — Gurudath to confirm and expand.",
+   "credits": [
+    [
+     "Written & Directed",
+     "Gurudath Sadanandan"
+    ],
+    [
+     "Song",
+     "NAMA"
+    ],
+    [
+     "Production",
+     "Videogrammer Studios"
+    ],
+    [
+     "Edit & Grade",
+     "Gurudath Sadanandan"
+    ]
+   ],
+   "provenance": "Hybrid. Generated and composited imagery, original song, in-house edit and grade.",
+   "tools": "Seedance 2.5 (image & motion) · Suno (music production)",
+   "duration": 217
+  }
+ ]
+}

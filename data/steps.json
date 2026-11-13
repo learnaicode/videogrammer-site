@@ -1,0 +1,395 @@
+{
+ "lanes": [
+  {
+   "k": "pre",
+   "name": "Pre-production",
+   "sub": "Before a frame is shot",
+   "col": "#ff4fa3"
+  },
+  {
+   "k": "prod",
+   "name": "Production",
+   "sub": "On the floor",
+   "col": "#35e08a"
+  },
+  {
+   "k": "post",
+   "name": "Post-production",
+   "sub": "After the wrap",
+   "col": "#ff7a2f"
+  }
+ ],
+ "steps": [
+  {
+   "id": "pre_brief",
+   "lane": "pre",
+   "name": "Project brief",
+   "problem": "A project starts without anyone writing down what it is, for whom, how long, and with what money.",
+   "does": "Pins the format, length, audience, platform, budget level and way of making it, then decides which steps this project needs and which to skip.",
+   "early": false,
+   "cols": [
+    "Field",
+    "Value"
+   ]
+  },
+  {
+   "id": "pre_story",
+   "lane": "pre",
+   "name": "Story",
+   "problem": "The story lives in one head. Everyone downstream works from a different version of it.",
+   "does": "Completes the story in the international development format: title, logline, characters, world, acts, beat sheet and a one-page synopsis.",
+   "early": false,
+   "cols": [
+    "Section",
+    "Content"
+   ]
+  },
+  {
+   "id": "pre_screenplay",
+   "lane": "pre",
+   "name": "Screenplay",
+   "problem": "A story is not yet a plan. Until it is in scenes, nothing can be scheduled, costed or shot.",
+   "does": "Turns the story into a scene outline, then writes every scene in standard screenplay form, as a draft for the writer to rewrite.",
+   "early": false,
+   "cols": [
+    "Scene",
+    "Heading",
+    "Pages",
+    "Text"
+   ]
+  },
+  {
+   "id": "pre_script",
+   "lane": "pre",
+   "name": "Script breakdown",
+   "problem": "A script is read by twelve departments, and each keeps its own list.",
+   "does": "Reads the script and drafts the film's record: people, costumes, props, places and light, and the scene where each first appears.",
+   "early": true,
+   "cols": [
+    "Scene",
+    "I/E",
+    "D/N",
+    "Set",
+    "Eighths",
+    "Cast",
+    "Elements",
+    "Flags",
+    "Hold"
+   ]
+  },
+  {
+   "id": "pre_look",
+   "lane": "pre",
+   "name": "Look and cast lock",
+   "problem": "Each tool and each vendor starts from its own picture of the character.",
+   "does": "Drafts one approved look for each face, costume and place, for generators and vendors to start from.",
+   "early": false,
+   "cols": [
+    "Element",
+    "Type",
+    "Locked look",
+    "First scene",
+    "Reference needed"
+   ]
+  },
+  {
+   "id": "pre_previs",
+   "lane": "pre",
+   "name": "Previs and shot plan",
+   "problem": "The shot list lives in one head and the storyboard in another.",
+   "does": "Turns the scene into a shot plan, and says which shots a camera should take and which a generator can.",
+   "early": false,
+   "cols": [
+    "Scene",
+    "Shot",
+    "Size",
+    "Angle and move",
+    "Who and what",
+    "Camera or generated"
+   ]
+  },
+  {
+   "id": "pre_budget",
+   "lane": "pre",
+   "name": "Budget",
+   "problem": "Money is guessed late and line by line, and the expensive scenes are found after they are scheduled.",
+   "does": "Builds a top sheet and line budget from the breakdown at the brief's budget level, and names the scenes that drive the cost.",
+   "early": false,
+   "cols": [
+    "Department",
+    "Line item",
+    "Basis",
+    "Low",
+    "High",
+    "Notes"
+   ]
+  },
+  {
+   "id": "pre_schedule",
+   "lane": "pre",
+   "name": "Schedule and risk",
+   "problem": "The fragile days are found on the day they break.",
+   "does": "Reads the schedule against cast dates, locations and weather, marks the days most likely to break, and holds a cover plan for each.",
+   "early": false,
+   "cols": [
+    "Day",
+    "Scenes",
+    "Location",
+    "I/E D/N",
+    "Pages",
+    "Cast",
+    "Risk",
+    "Cover"
+   ]
+  },
+  {
+   "id": "pre_crew",
+   "lane": "pre",
+   "name": "Crew and locations",
+   "problem": "Crew and places are booked from memory, and the gaps appear on the first day.",
+   "does": "Lists the crew this project needs at its scale, and every location with what it must provide, permits and a backup.",
+   "early": false,
+   "cols": [
+    "Type",
+    "Name or role",
+    "Scenes",
+    "Needs",
+    "Permits and access",
+    "Backup"
+   ]
+  },
+  {
+   "id": "pre_vendor",
+   "lane": "pre",
+   "name": "Tools and vendor plan",
+   "problem": "Tools are chosen shot by shot, and later nobody can say which made what.",
+   "does": "Sets which tool or vendor makes each shot. The tools already in use come first, then they are connected, and custom code comes last.",
+   "early": false,
+   "cols": [
+    "Shots or scenes",
+    "Owner",
+    "Why",
+    "Must carry"
+   ]
+  },
+  {
+   "id": "prod_callsheet",
+   "lane": "prod",
+   "name": "Call sheets",
+   "problem": "Each night someone rebuilds tomorrow by hand from the schedule, the cast list and the weather.",
+   "does": "Turns the schedule into a call sheet for every shoot day: scenes, cast, calls, locations, special needs.",
+   "early": false,
+   "cols": [
+    "Day",
+    "Location",
+    "Scenes",
+    "Cast",
+    "Crew call",
+    "Special needs",
+    "Cover"
+   ]
+  },
+  {
+   "id": "prod_generate",
+   "lane": "prod",
+   "name": "Generated shots",
+   "problem": "Generated shots are made one prompt at a time, by different people, from different pictures of the character.",
+   "does": "Drafts the generation plan for each generated shot: the prompt, the reference it starts from, and what continuity it must hold.",
+   "early": false,
+   "cols": [
+    "Scene",
+    "Shot",
+    "Prompt",
+    "References needed",
+    "Must hold",
+    "Length (s)"
+   ]
+  },
+  {
+   "id": "prod_day",
+   "lane": "prod",
+   "name": "The day breaks",
+   "problem": "Rain stops the shoot. The unit waits, the day is lost, and the schedule is rebuilt by hand overnight.",
+   "does": "Re-solves the day against cast dates, locations and what is already shot, proposes a cover scene and drafts the new call sheet.",
+   "early": false,
+   "cols": [
+    "Risk",
+    "Days or scenes",
+    "Trigger",
+    "Cover plan"
+   ]
+  },
+  {
+   "id": "prod_set",
+   "lane": "prod",
+   "name": "On-set continuity",
+   "problem": "Costume and props drift between days. The script supervisor holds it all in notes and photos.",
+   "does": "Checks each setup against the film's record before the camera rolls.",
+   "early": false,
+   "cols": [
+    "Element",
+    "Scenes",
+    "State to hold",
+    "Changes at",
+    "Check before roll"
+   ]
+  },
+  {
+   "id": "prod_coverage",
+   "lane": "prod",
+   "name": "Coverage check",
+   "problem": "A missing angle is found at rushes the next day, after the unit has left the location.",
+   "does": "Checks the takes against the shot plan beside the set, and flags the gap before the unit moves.",
+   "early": false,
+   "cols": [
+    "Scene",
+    "Must-get shots",
+    "Safety shots",
+    "Inserts"
+   ]
+  },
+  {
+   "id": "prod_sound",
+   "lane": "prod",
+   "name": "Location sound",
+   "problem": "Unusable location sound sends the scene to dubbing weeks later.",
+   "does": "Reads the sound report the same night and lists only the lines that cannot be saved.",
+   "early": false,
+   "cols": [
+    "Scene",
+    "Risk",
+    "Plan",
+    "Wild tracks",
+    "Likely ADR"
+   ]
+  },
+  {
+   "id": "prod_rushes",
+   "lane": "prod",
+   "name": "Rushes overnight",
+   "problem": "Rushes pile up. The director sees selects days later.",
+   "does": "Logs a day's takes by scene and take from your notes, and proposes a first assembly order.",
+   "early": false,
+   "cols": [
+    "Item",
+    "Plan"
+   ]
+  },
+  {
+   "id": "post_edit",
+   "lane": "post",
+   "name": "Edit assist",
+   "problem": "Finding the take with the right line eats the editor's day.",
+   "does": "Finds takes by what is said and done in them, and builds string-outs for the editor to cut from.",
+   "early": false,
+   "cols": [
+    "Act or sequence",
+    "Scenes",
+    "Target length",
+    "Assembly notes"
+   ]
+  },
+  {
+   "id": "post_continuity",
+   "lane": "post",
+   "name": "Continuity check",
+   "problem": "A shot is regenerated by a second vendor. Nobody on that team has seen the rest of the film.",
+   "does": "Compares a new shot with what the film's record holds, shows each possible break beside the shot that set it, and leaves the decision to a person.",
+   "early": true,
+   "cols": [
+    "Checkpoint",
+    "Scenes or shots",
+    "What to check",
+    "When"
+   ]
+  },
+  {
+   "id": "post_vendors",
+   "lane": "post",
+   "name": "Vendor turnover",
+   "problem": "Three vendors deliver the same character. Each one matches its own reference.",
+   "does": "Drafts each vendor's turnover note with the record entries it needs, and the checks the delivery should pass.",
+   "early": false,
+   "cols": [
+    "Shot or scene",
+    "Vendor",
+    "Work",
+    "Record to send",
+    "Delivery check"
+   ]
+  },
+  {
+   "id": "post_sound",
+   "lane": "post",
+   "name": "Sound, music and dub",
+   "problem": "Every language version is rebuilt by hand, and lines drift from the picture.",
+   "does": "Keeps one list of lines across languages and marks where a dub no longer fits the cut.",
+   "early": false,
+   "cols": [
+    "Cue",
+    "Scene",
+    "Type",
+    "Mood and notes",
+    "Languages"
+   ]
+  },
+  {
+   "id": "post_grade",
+   "lane": "post",
+   "name": "Colour grade",
+   "problem": "The look drifts from shot to shot, and generated shots never match the camera.",
+   "does": "Sets the look of each sequence and the rules that make generated and camera shots sit together.",
+   "early": false,
+   "cols": [
+    "Sequence",
+    "Scenes",
+    "Look",
+    "Reference",
+    "Matching notes"
+   ]
+  },
+  {
+   "id": "post_titles",
+   "lane": "post",
+   "name": "Titles and credits",
+   "problem": "Credits are typed at the last minute, and names are wrong or missing.",
+   "does": "Writes the main title design brief and the credit order from the brief, cast and crew.",
+   "early": false,
+   "cols": [
+    "Block",
+    "Order",
+    "Credit",
+    "Name",
+    "Notes"
+   ]
+  },
+  {
+   "id": "post_delivery",
+   "lane": "post",
+   "name": "Lock, grade and delivery",
+   "problem": "A change arrives after picture lock. Conform, effects, sound and every version are redone by hand.",
+   "does": "Lists the versions a late change touches, and drafts the delivery trail for each AI shot.",
+   "early": false,
+   "cols": [
+    "Deliverable",
+    "Spec",
+    "For",
+    "Notes"
+   ]
+  },
+  {
+   "id": "post_release",
+   "lane": "post",
+   "name": "Release and marketing",
+   "problem": "The film is finished before anyone plans how people will find it.",
+   "does": "Plans the release: trailer beats, poster idea, loglines for each platform, festivals or channels, and a launch timeline.",
+   "early": false,
+   "cols": [
+    "Area",
+    "Item",
+    "Detail",
+    "When"
+   ]
+  }
+ ]
+}
