@@ -4,13 +4,13 @@ const NAV=[['films','Films','films.html'],['studio','Studios','studio.html'],['p
 const head=document.createElement('header');head.className='top';
 head.innerHTML=`<div class="wrap"><a class="brand logo" href="index.html" aria-label="Videogrammer home"><img src="assets/logo/mark.png" alt="" class="lm"><span class="lt">Videogrammer</span></a>
 <button id="burger" aria-expanded="false" aria-controls="mainnav">Menu</button>
-<nav class="main" id="mainnav">${NAV.map(([k,l,h])=>`<a href="${h}" class="${k===here?'on':''}">${l}</a>`).join('')}<button class="tog" id="motionTog" aria-pressed="true">Motion on</button><a class="cta" href="studio.html#commission">Make a film with us</a></nav></div>`;
+<nav class="main" id="mainnav">${NAV.map(([k,l,h])=>`<a href="${h}" class="${k===here?'on':''}">${l}</a>`).join('')}<button class="tog" id="motionTog" aria-pressed="true">Motion on</button>${here==='school'?'<a class="cta" href="school.html#interest">Register interest</a>':'<a class="cta" href="studio.html#enquire">Make a film with us</a>'}</nav></div>`;
 document.body.prepend(head);
 const foot=document.createElement('footer');foot.className='foot';
 foot.innerHTML=`<div class="wrap">
 <div><a class="brand logo" href="index.html" aria-label="Videogrammer home"><img src="assets/logo/mark.png" alt="" class="lm"><span class="lt">Videogrammer</span></a><p style="margin-top:12px;max-width:380px;font-size:14px">A film school, a film studio, and V AI: the guide that holds what your film has established. London · Dubai · India.</p></div>
-<div><h5>Videogrammer Studios</h5><a href="studio.html#commission">Commission a film</a><a href="process.html">Process</a><a href="films.html">Films</a><a href="mailto:guru@videogrammer.com">guru@videogrammer.com</a></div>
-<div><h5>Learn</h5><a href="school.html">AI Film School</a><a href="school.html#programme">The 48-week programme</a><a href="https://www.skool.com/videogrammer-8702/classroom">Classroom</a></div>
+<div><h5>Videogrammer Studios</h5><a href="studio.html#enquire">Commission a film</a><a href="process.html">Process</a><a href="films.html">Films</a><a href="mailto:guru@videogrammer.com">guru@videogrammer.com</a></div>
+<div><h5>Learn</h5><a href="school.html">AI Film School</a><a href="school.html#open">The 48-week programme</a><a href="https://www.skool.com/videogrammer-8702/classroom">Classroom</a></div>
 <div><h5>Build</h5><a href="vai.html">V AI</a><a href="vai.html#steps">The 25 steps</a><a href="research.html">Research</a><a href="mailto:guru@videogrammer.com">guru@videogrammer.com</a></div>
 <div class="fine">© 2026 Videogrammer. All rights reserved.</div></div>`;
 document.body.append(foot);

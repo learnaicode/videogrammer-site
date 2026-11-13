@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://videogrammer.com/sitemap.xml

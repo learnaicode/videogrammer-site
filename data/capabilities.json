@@ -1,0 +1,142 @@
+{
+ "verified": "13 November 2026",
+ "labels": {
+  "service": "Available service",
+  "pilot": "Pilot by enquiry",
+  "proto": "Prototype",
+  "recorded": "Recorded example",
+  "plan": "Planned"
+ },
+ "capabilities": [
+  {
+   "id": "commission",
+   "name": "Film commissions",
+   "status": "service",
+   "can": "We make music videos, short films and campaigns with captured and generated images, edited and graded in-house.",
+   "needs": "A brief and a conversation about scope.",
+   "limits": "Scope, timing and price are agreed per project.",
+   "evidence": "Five films released on YouTube since August 2026.",
+   "cta": [
+    "Commission a film",
+    "studio.html#enquire"
+   ]
+  },
+  {
+   "id": "review",
+   "name": "Reel continuity review",
+   "status": "pilot",
+   "can": "A person-led continuity review of one reel or scene, assisted by our experimental check. You get a written report of possible breaks with frames and timecodes, and a fix list.",
+   "needs": "The reel, or the scenes in question, and any references you have.",
+   "limits": "The automated check is not reliable enough to run alone, so a person reviews every flag. Offered as a scoped pilot.",
+   "evidence": "The check has run on written cases and one real scene (see Research).",
+   "cta": [
+    "Ask about a pilot",
+    "studio.html#enquire"
+   ]
+  },
+  {
+   "id": "vai",
+   "name": "V AI prototype, 25 steps",
+   "status": "proto",
+   "can": "Runs inside Claude. Drafts every step for your own film, from brief to release, and exports a workbook with one sheet per step.",
+   "needs": "A Claude account; each run uses the visitor's own Claude usage.",
+   "limits": "Drafts only. Nothing is saved as a shared project, there are no approvals or versions yet, and each draft needs checking by a person.",
+   "evidence": "Recorded run, 13 November 2026: a one-minute test film planned in 14 steps in about six minutes.",
+   "cta": [
+    "Try the prototype",
+    "https://claude.ai/artifact/RYyX92FTaWfrPZJpUiSQqm"
+   ]
+  },
+  {
+   "id": "breakdown",
+   "name": "Script breakdown",
+   "status": "proto",
+   "can": "Reads a whole screenplay, scene by scene, into a stripboard with cast, props, wardrobe, effects and what continuity must hold, plus a production assessment and a CSV.",
+   "needs": "The script as PDF, Word, Final Draft or text.",
+   "limits": "Not yet compared against a breakdown done by a first assistant director, so its accuracy is unmeasured.",
+   "evidence": "Recorded run, 13 November 2026: 190 of 190 scenes of a 203-page screenplay in about two and a half minutes.",
+   "cta": [
+    "Try it in the prototype",
+    "https://claude.ai/artifact/RYyX92FTaWfrPZJpUiSQqm"
+   ]
+  },
+  {
+   "id": "check",
+   "name": "Continuity check",
+   "status": "proto",
+   "can": "Compares a new shot, described or as still frames, with the film's record, and lists possible breaks with a severity and a question for a person.",
+   "needs": "The film's record and the shot to check.",
+   "limits": "Sees still frames, not motion. On its first real scene it raised false alarms. Not reliable on footage yet.",
+   "evidence": "First real scene, 11 November 2026: 22 false alarms, then 8 after two fixes (see Research).",
+   "cta": [
+    "Read the results",
+    "research.html#measured"
+   ]
+  },
+  {
+   "id": "workspace",
+   "name": "Saved projects, approvals, versions, teams",
+   "status": "plan",
+   "can": "One saved record of the film that every step reads and writes, with approvals, versions and history.",
+   "needs": "",
+   "limits": "Not built yet.",
+   "evidence": "",
+   "cta": [
+    "See the plan",
+    "vai.html#memory"
+   ]
+  },
+  {
+   "id": "local",
+   "name": "Open and local model deployments",
+   "status": "plan",
+   "can": "The same workflows on open models running on a client's own machines.",
+   "needs": "Suitable hardware.",
+   "limits": "In testing. No local model has passed our exam yet.",
+   "evidence": "Exam, 11 November 2026: two untrained local models scored 16 of 37.",
+   "cta": [
+    "Read the results",
+    "research.html#measured"
+   ]
+  },
+  {
+   "id": "classroom",
+   "name": "Videogrammer classroom on Skool",
+   "status": "service",
+   "can": "Our existing online classroom and community on Skool, where our current courses live.",
+   "needs": "A Skool account.",
+   "limits": "Separate from the 48-week programme.",
+   "evidence": "",
+   "cta": [
+    "Visit the classroom",
+    "https://www.skool.com/videogrammer-8702/classroom"
+   ]
+  },
+  {
+   "id": "programme",
+   "name": "AI Film School, 48-week programme",
+   "status": "plan",
+   "can": "A programme built around six films each learner makes, from a silent point-of-view film to a crewed thesis film.",
+   "needs": "",
+   "limits": "Written in full. Not open for enrolment; no cohort taught yet; not accredited. Dates and fees not announced.",
+   "evidence": "",
+   "cta": [
+    "Register interest",
+    "school.html#interest"
+   ]
+  },
+  {
+   "id": "schoolmode",
+   "name": "V AI in school mode",
+   "status": "plan",
+   "can": "Asks for the learner's attempt first, critiques their real work and records their authorship.",
+   "needs": "",
+   "limits": "Not built yet.",
+   "evidence": "",
+   "cta": [
+    "Register interest",
+    "school.html#interest"
+   ]
+  }
+ ]
+}
