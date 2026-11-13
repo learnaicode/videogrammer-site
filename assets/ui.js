@@ -16,7 +16,7 @@ document.querySelectorAll('form.enq').forEach(form=>form.addEventListener('submi
   form.querySelectorAll('[aria-invalid]').forEach(el=>el.removeAttribute('aria-invalid'));
   if(bad.length){bad.forEach(el=>el.setAttribute('aria-invalid','true'));bad[0].focus();msg.textContent='Please fill in: '+bad.map(el=>el.closest('label').firstChild.textContent.trim()).join(', ')+'.';msg.className='formmsg err';return;}
   const v=n=>{const el=form.querySelector('[name="'+n+'"]');return el?el.value.trim():'';};
-  const body=['Name: '+v('name'),'Email: '+v('email'),'Need: '+v('type'),v('length')?'Detail: '+v('length'):'',v('date')?'Date / place: '+v('date'):'',v('budget')?'Budget: '+v('budget'):'','',v('brief'),'','(Sent from videogrammer.com)'].filter((x,i,a)=>x!==''||a[i-1]!=='').join('\n');
+  const body=['Name: '+v('name'),'Email: '+v('email'),'Need: '+v('type'),v('length')?'Detail: '+v('length'):'',v('date')?'Date / place: '+v('date'):'',v('budget')?'Budget: '+v('budget'):'',(form.querySelector('[name=notify]')||{}).checked?'Please email me when enrolment opens.':'','',v('brief'),'','(Sent from videogrammer.com)'].filter((x,i,a)=>x!==''||a[i-1]!=='').join('\n');
   const href='mailto:guru@videogrammer.com?subject='+encodeURIComponent(form.dataset.subject+': '+v('name'))+'&body='+encodeURIComponent(body);
   window.location.href=href;
   msg.innerHTML='Your email app should now open with the message ready. Press send there to reach us. If nothing opened, write to <a href="mailto:guru@videogrammer.com">guru@videogrammer.com</a> or use WhatsApp.';msg.className='formmsg';

@@ -283,3 +283,17 @@ details .tablewrap{padding:0 12px 12px}
 body[data-page=home] .btn.solid{background:#2d58e8;border-color:#2d58e8;color:#fff}
 
 .enq .grid>*,.enq label{min-width:0}.enq input,.enq select,.enq textarea{width:100%;max-width:100%;min-width:0}
+
+/* review round 2 */
+footer.foot .wrap{grid-template-columns:1.6fr 1fr 1fr 1fr 1fr}
+@media (max-width:900px){footer.foot .wrap{grid-template-columns:1fr 1fr}footer.foot .wrap>div:first-child{grid-column:1/-1}}
+@media (max-width:760px){.wa{display:none}}
+.hgrid{grid-template-columns:1.25fr 1fr}
+section.hero.home h1{font-size:clamp(44px,5.6vw,88px)}
+.evid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;margin-bottom:22px;align-items:start}
+@media (max-width:860px){.evid{grid-template-columns:1fr}}
+.evid figure img{width:100%;height:auto;border:1px solid var(--line2)}
+.evid figcaption{font-size:13px;color:#b9c1d0;margin-top:6px}
+.ev{display:grid;gap:10px}.ev dt{font:11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#b9c1d0}.ev dd{color:#dfe4ee;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.tag{color:#dfe4ee;border-color:var(--line2)}
+.chk{flex-direction:row!important;align-items:center;gap:10px!important;font-size:14.5px!important;color:#dfe4ee!important}.chk input{width:20px!important;min-height:20px!important}

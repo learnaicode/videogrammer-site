@@ -23,9 +23,9 @@
   },
   {
    "id": "review",
-   "name": "Reel continuity review",
+   "name": "Continuity pilot",
    "status": "pilot",
-   "can": "A person-led continuity review of one reel or scene, assisted by our experimental check. You get a written report of possible breaks with frames and timecodes, and a fix list.",
+   "can": "For small hybrid teams getting revisions from several tools or people: one agreed scene or sequence, an approved reference record, person-reviewed findings with frames and timecodes, a correction list, and one review of the returned revision.",
    "needs": "The reel, or the scenes in question, and any references you have.",
    "limits": "The automated check is not reliable enough to run alone, so a person reviews every flag. Offered as a scoped pilot.",
    "evidence": "The check has run on written cases and one real scene (see Research).",
@@ -40,7 +40,7 @@
    "status": "proto",
    "can": "Runs inside Claude. Drafts every step for your own film, from brief to release, and exports a workbook with one sheet per step.",
    "needs": "A Claude account; each run uses the visitor's own Claude usage.",
-   "limits": "Drafts only. Nothing is saved as a shared project, there are no approvals or versions yet, and each draft needs checking by a person.",
+   "limits": "Drafts only. Work is saved in that browser's local storage: it survives a refresh or closing the tab, but not a different browser or device, and clearing site data deletes it. No shared projects, approvals or versions yet. Each draft needs checking by a person.",
    "evidence": "Recorded run, 13 November 2026: a one-minute test film planned in 14 steps in about six minutes.",
    "cta": [
     "Try the prototype",
@@ -54,7 +54,7 @@
    "can": "Reads a whole screenplay, scene by scene, into a stripboard with cast, props, wardrobe, effects and what continuity must hold, plus a production assessment and a CSV.",
    "needs": "The script as PDF, Word, Final Draft or text.",
    "limits": "Not yet compared against a breakdown done by a first assistant director, so its accuracy is unmeasured.",
-   "evidence": "Recorded run, 13 November 2026: 190 of 190 scenes of a 203-page screenplay in about two and a half minutes.",
+   "evidence": "Recorded run, 13 November 2026: 190 of 190 scenes of a 203-page screenplay read in about two and a half minutes, timed in the browser from sending the script to the finished stripboard, on Claude through the claude.ai artifact (the platform does not report the exact model version). Reading every scene is not the same as getting every requirement right.",
    "cta": [
     "Try it in the prototype",
     "https://claude.ai/artifact/RYyX92FTaWfrPZJpUiSQqm"

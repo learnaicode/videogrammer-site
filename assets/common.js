@@ -9,15 +9,17 @@ document.body.prepend(head);
 const foot=document.createElement('footer');foot.className='foot';
 foot.innerHTML=`<div class="wrap">
 <div><a class="brand logo" href="index.html" aria-label="Videogrammer home"><img src="assets/logo/mark.png" alt="" class="lm"><span class="lt">Videogrammer</span></a><p style="margin-top:12px;max-width:380px;font-size:14px">A film school, a film studio, and V AI: the guide that holds what your film has established. London · Dubai · India.</p></div>
-<div><h5>Videogrammer Studios</h5><a href="studio.html#enquire">Commission a film</a><a href="process.html">Process</a><a href="films.html">Films</a><a href="mailto:guru@videogrammer.com">guru@videogrammer.com</a></div>
+
 <div><h5>Learn</h5><a href="school.html">AI Film School</a><a href="school.html#open">The 48-week programme</a><a href="https://www.skool.com/videogrammer-8702/classroom">Classroom</a></div>
-<div><h5>Build</h5><a href="vai.html">V AI</a><a href="vai.html#steps">The 25 steps</a><a href="research.html">Research</a><a href="mailto:guru@videogrammer.com">guru@videogrammer.com</a></div>
+<div><h5>Films</h5><a href="films.html">All films</a><a href="film-go-go-little-one.html">Go Go Little One</a><a href="film-stay-standing.html">Stay Standing</a></div>
+<div><h5>Build</h5><a href="vai.html">V AI</a><a href="vai.html#steps">The 25 steps</a><a href="research.html">Research</a><a href="privacy.html">Privacy</a></div>
+<div><h5>Videogrammer Studios</h5><a href="studio.html#enquire">Commission a film</a><a href="process.html">Process</a><a href="mailto:guru@videogrammer.com">guru@videogrammer.com</a><a href="https://wa.me/16504437662" rel="noopener">WhatsApp</a></div>
 <div class="fine">© 2026 Videogrammer. All rights reserved.</div></div>`;
 document.body.append(foot);
 const wa=document.createElement('a');wa.className='wa';wa.href='https://wa.me/16504437662';wa.textContent='WhatsApp';wa.rel='noopener';document.body.append(wa);
 if(!document.getElementById('hud')){const h=document.createElement('div');h.id='hud';h.innerHTML='<div class="a">ENTERING</div><div class="b">Your film</div>';document.body.append(h);}
 const wc=document.getElementById('world'),vl=document.querySelector('.veil');
-const dim=()=>{head.classList.toggle('solid',scrollY>40);const k=Math.min(1,scrollY/(innerHeight*0.7));if(wc)wc.style.opacity=String(1-k*0.62);if(vl)vl.style.opacity=String(0.6+k*0.4);};
+const dim=()=>{head.classList.toggle('solid',scrollY>40);const k=Math.min(1,scrollY/(innerHeight*0.7));if(wc)wc.style.opacity=String((here==='home'?0.55:1)-k*(here==='home'?0.3:0.62));if(vl)vl.style.opacity=String(0.6+k*0.4);};
 addEventListener('scroll',dim,{passive:true});dim();
 document.getElementById('burger').onclick=e=>{const n=document.getElementById('mainnav');n.classList.toggle('open');e.target.setAttribute('aria-expanded',n.classList.contains('open'));};
 const mt=document.getElementById('motionTog');const setT=()=>{const on=!document.body.classList.contains('calm');mt.textContent=on?'Motion on':'Motion off';mt.setAttribute('aria-pressed',on);};
