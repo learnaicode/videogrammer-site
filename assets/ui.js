@@ -6,6 +6,12 @@ document.querySelectorAll('[role="tablist"]').forEach(list=>{
   const select=t=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;const p=document.getElementById(x.getAttribute('aria-controls'));if(p)p.hidden=!on;});};
   tabs.forEach((t,i)=>{t.addEventListener('click',()=>select(t));t.addEventListener('keydown',e=>{let j=null;if(e.key==='ArrowRight')j=(i+1)%tabs.length;if(e.key==='ArrowLeft')j=(i-1+tabs.length)%tabs.length;if(e.key==='Home')j=0;if(e.key==='End')j=tabs.length-1;if(j!==null){e.preventDefault();select(tabs[j]);tabs[j].focus();}});});
 });
+/* copy a starter instruction */
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{const el=document.getElementById(b.dataset.copy);const txt=el?el.textContent:'';
+  const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1800);};
+  if(navigator.clipboard)navigator.clipboard.writeText(txt).then(done,()=>{const r=document.createRange();r.selectNodeContents(el);getSelection().removeAllRanges();getSelection().addRange(r);b.textContent='Selected: press copy';});else done();}));
+/* journey: opening a stage scrolls it into view */
+document.querySelectorAll('#journey [role=tab]').forEach(t=>t.addEventListener('click',()=>{const p=document.getElementById(t.getAttribute('aria-controls'));if(p&&!document.body.classList.contains('calm'))setTimeout(()=>p.scrollIntoView({behavior:'smooth',block:'nearest'}),60);}));
 /* click to play: the YouTube player loads only when asked */
 document.querySelectorAll('.player[data-yt]').forEach(b=>b.addEventListener('click',()=>{
   const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0';f.title=b.getAttribute('aria-label')||'Film';

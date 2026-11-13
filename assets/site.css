@@ -368,3 +368,32 @@ img{height:auto}
 .panel figure.doorimg{position:relative;margin:-24px -24px 18px;overflow:hidden;border-bottom:1px solid var(--line2)}
 .panel figure.doorimg img{width:100%;aspect-ratio:16/9;object-fit:cover}
 @media (max-width:520px){.sixfilms{grid-template-columns:repeat(2,1fr)}}
+/* journey: where are you with your film */
+.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0 0}
+.choice{position:relative;min-height:340px;border:1px solid var(--line2);background-size:cover;background-position:center;cursor:pointer;overflow:hidden;text-align:left;padding:0;color:#fff;transition:transform .5s cubic-bezier(.2,.9,.2,1),border-color .3s,box-shadow .3s}
+.choice::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,12,0) 35%,rgba(5,7,12,.92));transition:background .3s}
+.choice span{position:absolute;left:22px;right:22px;bottom:20px;font:900 clamp(26px,2.6vw,40px)/1 var(--disp);text-transform:uppercase}
+.choice:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 24px 60px -24px var(--accent)}
+.choice[aria-selected="true"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.choice[aria-selected="true"]::after{content:'';position:absolute;left:50%;bottom:-1px;width:18px;height:18px;background:var(--accent);transform:translate(-50%,50%) rotate(45deg)}
+.jpanel{margin-top:18px;border:1px solid var(--line2);background:rgba(8,11,18,.9);padding:28px;animation:jin .5s cubic-bezier(.2,.9,.2,1)}
+@keyframes jin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.jgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
+.jpics{display:grid;gap:12px}.jpics figure.shot{margin:0}.jpics figure.shot img{aspect-ratio:16/9}
+.jpics figcaption{position:absolute;left:0;bottom:0;padding:8px 12px;font:500 11px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;background:rgba(5,7,12,.72)}
+.jtext h3{font-size:clamp(28px,3vw,44px);margin-bottom:12px}
+.jtext .helps{margin:16px 0;padding:12px 14px;border-left:3px solid var(--accent);background:rgba(61,107,255,.08)}
+.jtext .helps b{display:block;font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.starter{border:1px dashed var(--line2);padding:14px;margin:0 0 16px;position:relative}
+.starter p{font:14px/1.5 var(--mono);color:#dfe5f0;margin:6px 0 10px}
+.door .avail{margin-top:10px;font:12px var(--mono);letter-spacing:.06em;color:var(--cob2)}
+@media (max-width:900px){.choices{grid-template-columns:1fr}.choice{min-height:200px}.jgrid{grid-template-columns:1fr}.jpanel{padding:18px}}
+/* page-arrival title: a solid dark plate so the words land before the motion */
+#hud{background:#060b1f;border:1px solid rgba(120,150,255,.35);padding:26px 46px 30px;box-shadow:0 0 0 100vmax rgba(3,5,14,.55),0 30px 80px rgba(0,0,0,.6)}
+#hud .b{text-shadow:none}
+/* on arrival, a solid navy plate sits behind the hero words, then dissolves into the world */
+section.hero.inner .wrap,section.hero.home .hgrid>div:first-child{position:relative}
+section.hero.inner .wrap::before,section.hero.home .hgrid>div:first-child::before{content:'';position:absolute;z-index:-1;pointer-events:none;left:-34px;top:-30px;bottom:-30px;width:min(820px,calc(100% + 68px));background:#050a1f;box-shadow:0 0 80px 40px #050a1f;animation:plate 3.4s ease forwards}
+section.hero.home .hgrid>div:first-child::before{width:auto;right:-34px}
+@keyframes plate{0%,55%{opacity:.94}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){section.hero.inner .wrap::before,section.hero.home .hgrid>div:first-child::before{animation:none;opacity:0}}
