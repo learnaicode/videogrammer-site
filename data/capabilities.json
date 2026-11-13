@@ -100,16 +100,16 @@
    ]
   },
   {
-   "id": "classroom",
-   "name": "Videogrammer classroom on Skool",
+   "id": "sessions",
+   "name": "Learn AI with Videogrammer, one to one",
    "status": "service",
-   "can": "Our existing online classroom and community on Skool, where our current courses live.",
-   "needs": "A Skool account.",
-   "limits": "Separate from the 48-week programme.",
+   "can": "Live sessions, one to one or for your group, booked when you need them: the latest AI tools for film and creative work, and how to put them to work in your job and your films.",
+   "needs": "Who is learning, what you want to be able to do, and when.",
+   "limits": "Booked on request. Topics, length and fee agreed before each booking. No certificate.",
    "evidence": "",
    "cta": [
-    "Visit the classroom",
-    "https://www.skool.com/videogrammer-8702/classroom"
+    "Book a session",
+    "school.html#interest"
    ]
   },
   {
