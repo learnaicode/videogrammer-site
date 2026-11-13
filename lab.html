@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lab · Continuity research and development · Videogrammer</title>
+<meta name="description" content="How Videogrammer builds and measures the continuity check behind V AI, and what has been measured so far.">
+<meta property="og:title" content="Lab · Continuity research and development · Videogrammer"><meta property="og:description" content="How Videogrammer builds and measures the continuity check behind V AI, and what has been measured so far.">
+<link rel="icon" type="image/png" href="assets/logo/favicon.png"><link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="lab" style="--accent:#ffb020">
+<canvas id="world" aria-hidden="true"></canvas><div class="veil"></div>
+<main>
+<section class="hero"><div class="wrap">
+  
+  <div class="slate rv">The Lab <b>·</b> continuity research and development</div>
+  <h1 class="rv" style="margin:22px 0 26px;font-size:clamp(52px,8.5vw,128px)">Steering is not <em>measuring.</em></h1>
+  <p class="lead rv">Approved references steer a generator toward the right image. They do not tell you whether the shot that came back matches the film. The Lab builds the check that does, and measures it in the open.</p>
+  
+</div></section>
+<section><div class="wrap">
+  <div class="slate rv">What the check must get right</div><h2 class="rv" style="margin:14px 0 26px">Evidence, <em>not suspicion.</em></h2>
+  <div class="grid g2">
+    <div class="panel rv" style="padding:26px"><h3 style="font-size:28px">What it must never do</h3><ul style="margin:12px 0 0 18px;color:#cfd5e2;line-height:1.8"><li>Treat an unseen hand as a missing hand</li><li>Treat a reverse angle as a new location</li><li>Treat a wider shot that reveals someone as a break</li><li>Treat an AI label, or a "passed" field, as proof</li></ul></div>
+    <div class="panel rv" style="padding:26px"><h3 style="font-size:28px">The four verdicts</h3><ul style="margin:12px 0 0 18px;color:#cfd5e2;line-height:1.8"><li><b style="color:var(--amb)">Confirmed break</b>, with the frames and timecodes</li><li><b style="color:var(--ok)">Explained change</b>, deliberate in the story</li><li><b style="color:var(--cob2)">Needs review</b>, by a person</li><li><b style="color:var(--mute)">Insufficient evidence</b>, said out loud</li></ul></div>
+  </div>
+  <p class="lead rv" style="margin-top:22px">We measure three things separately: what the system sees in a frame, whether it judges continuity correctly, and whether the whole run from footage to report holds up.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="slate rv">Measured so far</div><h2 class="rv" style="margin:14px 0 26px">The numbers, <em>unflattering ones too.</em></h2>
+  <table class="truth rv">
+    <tr><th>What we measured</th><th>Result</th><th>What it means</th></tr>
+    <tr><td>The engine's own planted tests</td><td>10 of 10 caught, no false alarms</td><td>It finds the breaks we planted. That is a low bar.</td></tr>
+    <tr><td>First real scene, from an openly licensed film, with no real breaks</td><td>22 false alarms, then 8 after two fixes</td><td>Not ready to sell. Free descriptions compared as text are the cause; a structured record of the film is the cure.</td></tr>
+    <tr><td>Local models on our locked exam (37 cases)</td><td>Both scored 16 of 37</td><td>The same as believing every flag. No local model has earned a job yet.</td></tr>
+  </table>
+</div></section>
+
+<section><div class="wrap">
+  <div class="slate rv">The loop</div><h2 class="rv" style="margin:14px 0 26px">How a model <em>earns a job.</em></h2>
+  <div class="grid g4"><div class="panel rv" style="padding:22px"><div class="slate" style="color:var(--amb)">01</div><h3 style="font-size:24px;margin:8px 0">A locked exam</h3><p style="font-size:14px">Cases the models never train on. A changed exam is refused.</p></div><div class="panel rv" style="padding:22px"><div class="slate" style="color:var(--amb)">02</div><h3 style="font-size:24px;margin:8px 0">A scoreboard</h3><p style="font-size:14px">Every model sits the same exam, frontier or local, and the score is kept.</p></div><div class="panel rv" style="padding:22px"><div class="slate" style="color:var(--amb)">03</div><h3 style="font-size:24px;margin:8px 0">A handover rule</h3><p style="font-size:14px">A small local model takes a job only when it beats the bar on the exam.</p></div><div class="panel rv" style="padding:22px"><div class="slate" style="color:var(--amb)">04</div><h3 style="font-size:24px;margin:8px 0">Lessons, with consent</h3><p style="font-size:14px">Corrections become lessons only from work whose owners agreed in writing.</p></div></div>
+</div></section>
+</main>
+<script src="data/site-data.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script>window.WORLD={path:'lab',tint:'#ffb020'}</script>
+<script src="assets/world.js"></script>
+<script src="assets/common.js"></script>
+
+</body>
+</html>

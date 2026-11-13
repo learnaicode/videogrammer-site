@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Films · Videogrammer Studios</title>
+<meta name="description" content="Films made by Videogrammer Studios: music videos and shorts with captured and generated images.">
+<meta property="og:title" content="Films · Videogrammer Studios"><meta property="og:description" content="Films made by Videogrammer Studios: music videos and shorts with captured and generated images.">
+<link rel="icon" type="image/png" href="assets/logo/favicon.png"><link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="films" style="--accent:#ff7a2f">
+<canvas id="world" aria-hidden="true"></canvas><div class="veil"></div>
+<main>
+<section class="hero"><div class="wrap">
+  
+  <div class="slate rv">Films <b>·</b> Videogrammer Studios</div>
+  <h1 class="rv" style="margin:22px 0 26px;font-size:clamp(52px,8.5vw,128px)">The <em>films.</em></h1>
+  <p class="lead rv">Every film below was written, directed, edited and graded in-house. Each one lists how it was made.</p>
+  
+</div></section>
+<section style="padding-top:0"><div class="wrap"><div id="filmsGrid" class="grid g2" data-full="1"></div></div></section>
+</main>
+<script src="data/site-data.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script>window.WORLD={path:'films',tint:'#ff7a2f'}</script>
+<script src="assets/world.js"></script>
+<script src="assets/common.js"></script>
+
+</body>
+</html>
