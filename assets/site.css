@@ -180,3 +180,9 @@ h1,h2{text-shadow:0 2px 30px rgba(5,7,12,.6)}
 @media (max-width:420px){.brand.logo .lw{height:11px}}
 .lockup{width:min(420px,70vw);height:auto;margin:0 0 18px;filter:drop-shadow(0 10px 40px rgba(255,180,80,.18))}
 .door .dl{height:22px;width:auto;margin:10px 0 2px;opacity:.95}
+
+.brand.logo .lt{font:700 19px var(--disp);letter-spacing:.28em;text-transform:uppercase;color:#e8d3a6}
+.brand.logo .lw{display:none}
+body.leaving main,body.leaving header.top,body.leaving footer.foot{opacity:0;filter:blur(8px);transition:opacity .5s,filter .5s}
+main{animation:arrive .9s ease both}@keyframes arrive{from{opacity:0;filter:blur(10px)}to{opacity:1;filter:none}}
+body.calm main{animation:none}
